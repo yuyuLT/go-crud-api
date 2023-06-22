@@ -12,3 +12,4 @@ api template used by go
 ## Run
 1. Edit app/main.go file
 2. Execute ```docker compose exec app go run main.go```
+3. Access http://localhost:3150/
