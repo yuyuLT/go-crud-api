@@ -2,7 +2,7 @@ package task
 
 import "time"
 
-type Recipe struct {
+type Task struct {
 	ID        string    `json:"id"`
 	Body      string    `json:"body"`
 	Tags      []string  `json:"tags"`
