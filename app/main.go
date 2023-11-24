@@ -1,17 +1,10 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"api/routes"
 )
 
 func main() {
-	router := gin.Default()
-
-	router.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Hello World",
-		})
-	})
-
-	router.Run(":3150")
+	router := routes.NewRoutes()
+	router.Run()
 }
