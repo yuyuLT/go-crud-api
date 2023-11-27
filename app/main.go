@@ -6,5 +6,5 @@ import (
 
 func main() {
 	router := routes.NewRoutes()
-	router.Run()
+	router.Run(":3150")
 }
