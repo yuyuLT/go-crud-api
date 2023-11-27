@@ -1,11 +1,10 @@
-package task
+package models
 
-import "time"
+import (
+	"github.com/jinzhu/gorm"
+)
 
 type Task struct {
-	ID        string    `json:"id"`
-	Body      string    `json:"body"`
-	Tags      []string  `json:"tags"`
-	CreatedAt time.Time `json:"CreatedAt"`
-	UpdateAt  time.Time `json:"UpdateAt"`
+	gorm.Model
+	Body string `json:"body"`
 }
