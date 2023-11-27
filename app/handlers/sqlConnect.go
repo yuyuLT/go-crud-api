@@ -7,8 +7,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-var db *gorm.DB
-
 func sqlConnect() (database *gorm.DB) {
 	DBMS := "mysql"
 	USER := "go_test"
