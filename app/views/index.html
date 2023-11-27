@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TO DO</title>
+  </head>
+  <body>
+    <header>
+      <h1>TODOリスト</h1>
+    </header>
+    <div class="wrap">
+      <div class="input">
+        <form action="/new" method="post">
+          <p>タスクを追加 : <input type="text" name="body" size="30" placeholder="タスクを入力"/></p>
+          <p><input type="submit" value="追加" /></p>
+        </form>
+      </div>
+      <div class="indexGet">
+        <ul>
+          {{range.tasks}}
+          <li>
+            {{.Body}}
+            <label><a href="/delete/{{.ID}}">削除</a></label>
+          </li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
